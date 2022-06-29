@@ -10,9 +10,12 @@
 .pointer {
     cursor: pointer;
 }
+.listEquipped{
+    overflow: scroll;
+}
 .inicioDivT{
     height: 40rem;
-    background-image: url("/assets/images/bannerTerrazaInicio.jpg");
+    background-image: url("/assets/images/bannerMyaInicio.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
