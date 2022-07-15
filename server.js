@@ -64,11 +64,11 @@ app.post("/ajax/email", function (request, response) {
     });
 
     
-    var htmlBody = `<h2>Correo de contacto</h2><p>Nombre: ${request.body.name} </p> <p>Número de contacto: ${request.body.number} </p> <p> Correo electrónico: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p>`;
+    var htmlBody = `<h2>Correo de contacto</h2><p>Name: ${request.body.name} </p> <p>Phone: ${request.body.number} </p> <p> e-mail: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Arrive date: ${request.body.arriveDate} </p><p>Departure: ${request.body.departDate} </p>`;
     var mail = {
         from: '"Team: Xyncs Web Studio',
-        to: 'info@terrazai662.com',
-        subject: '¡Alguien ha dejado sus datos en Terraza i662!',
+        to: 'hebrit_626@hotmail.com',
+        subject: '¡Alguien ha dejado sus datos en Mya 307!',
         html: htmlBody
     };
     transporter.sendMail(mail, function (err, info) {

@@ -38,6 +38,17 @@
     margin-bottom: 3%;
     margin-top: 5%;
 }
+.theBest{
+    margin-top: 11% !important;
+}
+#contacto{
+    background-image: url("/assets/images/myaBan.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 3%;
+
+}
 .privacidadBanner{
     height: 36rem;
     background-image: url("/assets/images/bannerTerrazaInicio.jpg");
@@ -73,6 +84,9 @@
     
 }
 @media(max-width:991px){
+    .serviciosT{
+        margin-top: -17%;
+    }
     .componentsDiv{
         margin-top: -31%;
     }
@@ -87,6 +101,8 @@
     #contacto{
         margin-top: -30%;
         margin-bottom: -30%;
+        background-position: 50% 50%;
+        background-image: url("/assets/images/banRes.jpg");
     }
     .responsiveMarginCard{
         margin-top: 5%;
@@ -94,6 +110,15 @@
     .inicioDivT{
         height: 26rem;
     
+    }
+    #gym{
+        margin-top: -36%;
+    }
+    .theBest{
+        margin-top: 83% !important;
+    }
+    .contactForm{
+        margin-top: -20% !important;
     }
    
 }

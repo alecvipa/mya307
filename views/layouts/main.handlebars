@@ -24,6 +24,11 @@
     <!-- MDB -->
     <link rel="stylesheet" href="/assets/css/mdb.min.css" />
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    {{!-- Datepicker --}}
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
     <!-- Google Fonts Roboto -->
@@ -31,6 +36,28 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
 
     <script>
+        $(document).ready(function () {
+            var date_input = $('input[name="arriveDate"]'); //our date input has the name "date"
+            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+            var options = {
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            };
+            date_input.datepicker(options);
+        });
+         $(document).ready(function () {
+            var date_input = $('input[name="departDate"]'); //our date input has the name "date"
+            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+            var options = {
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            };
+            date_input.datepicker(options);
+        });
         function submitEmailForm(form) {
             var obj = new XMLHttpRequest();
             obj.onreadystatechange = function () {
@@ -46,7 +73,7 @@
             };
             obj.open("post", form.action, true);
             obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
-            obj.send(JSON.stringify({ name: form.name.value, number: form.number.value, email: form.email.value }));
+            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, number: form.number.value, arriveDate: form.arriveDate.value , departDate: form.departDate.value }));
             alert("¡En breve te contactaremos!");
             $(".formInput").val(" ");
             return false;
@@ -59,7 +86,7 @@
     <div class="bodyPrincipal">
         {{{body}}}
     </div>
-    
+
     {{!-- FOOTER STARTS --}}
     <div class="footer bg-light">
         <div class="container textr-center">
@@ -67,7 +94,7 @@
 
                 <div class="col-md-3"></div>
                 <div class="col-md-6 text-center">
-                    <p><b>Terraza i662</b> Todos los derechos reservados. Sus datos están
+                    <p><b>Mya 307</b> Todos los derechos reservados. Sus datos están
                         protegidos por
                         la ley de privacidad. <span><a href="/privacidad" style="color: gray;">Visita nuestra
                                 política de privacidad</a></span></p>
