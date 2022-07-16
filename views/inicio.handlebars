@@ -48,6 +48,20 @@
     </nav>
     <!-- Navbar -->
     <div class="inicioDivT">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <img src="/assets/images/myaLogoInic.jpg" alt="logoInicio" class="logoInic">
+                </div>
+                <div class="col-md-4"></div>
+            </div> <br>
+            <div class="row">
+                <h2 class="fw-bold mb-5 text-center text-white">The best place to stay
+                    <hr>in Aldea Zamá
+                </h2>
+            </div>
+        </div>
 
     </div>
     <div id="nosotros" class="nosotrosT container">
@@ -86,7 +100,7 @@
             <!---->
             <section draggable="false" class="container pt-5" data-v-271253ee="">
                 <section class="mb-10">
-                    <h2 class="fw-bold mb-5 text-center">The best place to stay in Aldea Zamá</h2>
+
                     <br>
                     <div class="row gx-lg-5 mb-5 align-items-center">
                         <div class="col-md-6 mb-4 mb-md-0">
@@ -382,10 +396,14 @@
                                 }
                             </style> --}}
                             <div class="container px-4 py-5 px-md-5 text-center text-lg-start">
+                               
                                 <div class="row gx-lg-5 align-items-center mb-5">
                                     <div class="col-lg-6 mb-5 mb-lg-0 theBest" style="z-index: 10">
-                                        <h1 class="my-5 display-3 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-                                            <span>The best
+                                        <img src="/assets/images/myaLogoContacto.jpg" alt="logoContacto"
+                                            class="logoContacto">
+
+                                        <h1 class=" display-3 fw-bold ls-tight titleContact" style="color: hsl(218, 81%, 95%)">
+                                            <span >The best
                                                 place to stay</span> <br> <span style="color: hsl(218, 82%, 83%)">in
                                                 Aldea Zamá</span>
                                         </h1>
@@ -397,12 +415,14 @@
                                         <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
                                         <div class="card bg-glass">
                                             <div class="card-body px-4 py-5 px-md-5">
-                                                <form action="/ajax/email" method="POST" onsubmit="return submitEmailForm(this);">
+                                                <form action="/ajax/email" method="POST"
+                                                    onsubmit="return submitEmailForm(this);">
                                                     <!-- 2 column grid layout with text inputs for the first and last names -->
                                                     <div class="row">
                                                         <div class="col-md-12 mb-4">
                                                             <div class="form-outline"> <input type="text"
-                                                                    id="form3Example1" class="form-control formInput" name="name" required>
+                                                                    id="form3Example1" class="form-control formInput"
+                                                                    name="name" required>
                                                                 <label class="form-label" for="form3Example1"
                                                                     style="margin-left: 0px;">Name</label>
                                                                 <div class="form-notch">
@@ -417,7 +437,8 @@
 
                                                     </div> <!-- Email input -->
                                                     <div class="form-outline mb-4"> <input type="email"
-                                                            id="form3Example3" class="form-control formInput" name="email" required>
+                                                            id="form3Example3" class="form-control formInput"
+                                                            name="email" required>
                                                         <label class="form-label" for="form3Example3"
                                                             style="margin-left: 0px;">Email address</label>
                                                         <div class="form-notch">
@@ -427,7 +448,8 @@
                                                         </div>
                                                     </div> <!-- Number input -->
                                                     <div class="form-outline mb-4">
-                                                        <input type="number" id="form6Example6" class="form-control formInput" name="number" required/>
+                                                        <input type="number" id="form6Example6"
+                                                            class="form-control formInput" name="number" required />
                                                         <label class="form-label" for="form6Example6">Phone</label>
                                                     </div>
                                                     {{!-- Calendar --}}
@@ -436,8 +458,9 @@
                                                             <!-- Date input -->
                                                             <label class="control-label" for="date">Preferred arrive
                                                                 date</label>
-                                                            <input class="form-control formInput" id="date" 
-                                                                placeholder="MM/DD/YYY" type="text" name="arriveDate" required />
+                                                            <input class="form-control formInput" id="date"
+                                                                placeholder="MM/DD/YYY" type="text" name="arriveDate"
+                                                                required />
                                                         </div>
                                                     </section>
                                                     <section>
@@ -445,8 +468,9 @@
                                                             <!-- Date input -->
                                                             <label class="control-label" for="date">Preferred depart
                                                                 date</label>
-                                                            <input class="form-control formInput" id="date" 
-                                                                placeholder="MM/DD/YYY" type="text" name="departDate" required />
+                                                            <input class="form-control formInput" id="date"
+                                                                placeholder="MM/DD/YYY" type="text" name="departDate"
+                                                                required />
                                                         </div>
                                                     </section>
                                                     <!-- Checkbox -->
