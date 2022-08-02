@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="facebook-domain-verification" content="2dtfi3kofxydcglrs1ukucybyaxvii" />
-    <meta name="description" content="The best place to stay in Tulum and enjoy!">
+    <meta name="description" content="Beautiful studio located in Aldea Zamá, Tulum">
     <meta name="keywords"
         content="Consultoría empresarial, Consultoría estratégica , Empresa de consultoría , Consultoría financiera, Consultoría administrativa , Servicios de consultoría , Consultoría especializada">
     <title>Mya 307</title>
@@ -73,9 +73,10 @@
             };
             obj.open("post", form.action, true);
             obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
-            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, number: form.number.value, arriveDate: form.arriveDate.value , departDate: form.departDate.value }));
-            alert("¡En breve te contactaremos!");
+            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, number: form.number.value, arriveDate: form.arriveDate.value , departDate: form.departDate.value, people: form.people.value }));
+            alert("¡You will be contacted shortly!");
             $(".formInput").val(" ");
+            window.location.href = "https://www.mya307.com/thanku";
             return false;
         }
     </script>
