@@ -137,23 +137,37 @@
 @media (min-width:451px) and (max-width:991px) {
     .inicioDivT {
         height: 27rem;
-       
-
     }
 
 }
 
 @media(max-width:450px) {
     .inicioDivT {
-        height: 30rem;
         background-image: url("/assets/images/banRes.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         margin-bottom: 3%;
-        height: 40rem;
+        height: 46rem;
 
     }
+    .bannerLong {
+        height: 36rem;
+        background-image: url("/assets/images/longStory.jpg");
+    
+    }
+    .theGreat{
+        margin-top: 20%;
+        text-align: center;
+    }
+    .longStaysProp {
+
+        padding-bottom: 10%;
+    }
+    #contactoSecond {
+        padding-top: 30% ;
+    }
+    
 }
 
 
