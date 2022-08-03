@@ -134,7 +134,7 @@
 
 }
 
-@media (min-width:400px) and (max-width:991px) {
+@media (min-width:451px) and (max-width:991px) {
     .inicioDivT {
         height: 27rem;
        
@@ -143,7 +143,7 @@
 
 }
 
-@media(max-width:400px) {
+@media(max-width:450px) {
     .inicioDivT {
         height: 30rem;
         background-image: url("/assets/images/banRes.jpg");
