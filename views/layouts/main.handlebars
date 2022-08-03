@@ -47,7 +47,7 @@
             };
             date_input.datepicker(options);
         });
-         $(document).ready(function () {
+        $(document).ready(function () {
             var date_input = $('input[name="departDate"]'); //our date input has the name "date"
             var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
             var options = {
@@ -73,7 +73,28 @@
             };
             obj.open("post", form.action, true);
             obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
-            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, number: form.number.value, arriveDate: form.arriveDate.value , departDate: form.departDate.value, people: form.people.value }));
+            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, number: form.number.value, arriveDate: form.arriveDate.value, departDate: form.departDate.value, people: form.people.value }));
+            alert("¡You will be contacted shortly!");
+            $(".formInput").val(" ");
+            window.location.href = "https://www.mya307.com/thanku";
+            return false;
+        }
+        function submitEmailFormSecond(form) {
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, number: form.number.value, arriveDate: form.arriveDate.value, departDate: form.departDate.value, people: form.people.value }));
             alert("¡You will be contacted shortly!");
             $(".formInput").val(" ");
             window.location.href = "https://www.mya307.com/thanku";
@@ -83,7 +104,56 @@
 </head>
 
 <body class="fonts3" data-spy="scroll" data-target="#lashistaItemLandingPage" data-offset="0">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
 
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Mya 307</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/privacidad">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/longstays" style="color:  #2cacbc;">Long Stays </a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+
+            <!-- Right elements -->
+            <div class="d-flex align-items-center">
+                <!-- Icon -->
+                <a class="text-reset me-3" href="https://www.facebook.com/myatulum307" target="_blank">
+                    <i class="fa-brands fa-facebook" style="color: #3b5998;"></i>
+                </a>
+                <a class="text-reset me-3" href="https://www.instagram.com/myatulum307/?hl=es" target="_blank">
+                    <i class="fa-brands fa-instagram" style="color: #F56040;"></i>
+                </a>
+            </div>
+            <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
     <div class="bodyPrincipal">
         {{{body}}}
     </div>

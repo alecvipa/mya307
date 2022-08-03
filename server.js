@@ -63,7 +63,7 @@ app.post("/ajax/email", function (request, response) {
         }
     });
 
-    
+
     var htmlBody = `<h2>Correo de contacto</h2><p>Name: ${request.body.name} </p> <p>Phone: ${request.body.number} </p> <p> e-mail: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Arrive date: ${request.body.arriveDate} </p><p>Departure: ${request.body.departDate} </p> <p>Number of extra people: ${request.body.people} </p>`;
     var mail = {
         from: '"Team: Xyncs Web Studio',
@@ -77,7 +77,40 @@ app.post("/ajax/email", function (request, response) {
         } else {
             console.log("message sent!");
         };
+    })
+
+});
+app.post("/ajax/emailSecond", function (request, response) {
+    console.log(email);
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        secure: false,
+        port: 25,
+        auth: {
+            user: email,
+            pass: superSecretPwd
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
     });
+
+
+    var htmlBody = `<h2>Correo de contacto</h2><p>Name: ${request.body.name} </p> <p>Phone: ${request.body.number} </p> <p> e-mail: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Arrive date: ${request.body.arriveDate} </p><p>Departure: ${request.body.departDate} </p> <p>Number of extra people: ${request.body.people} </p>`;
+    var mail = {
+        from: '"Team: Xyncs Web Studio',
+        to: 'hebrit_626@hotmail.com',
+        subject: '¡Alguien ha dejado sus datos en Mya 307 (LONG STAY)!',
+        html: htmlBody
+    };
+    transporter.sendMail(mail, function (err, info) {
+        if (err) {
+            return console.log(err);
+        } else {
+            console.log("message sent!");
+        };
+    })
+
 });
 
 

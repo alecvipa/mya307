@@ -1,48 +1,69 @@
-
-.fonts3{
+.fonts3 {
     font-family: 'Montserrat';
 
 }
-.footer{
+
+.footer {
     padding-top: 3%;
     padding-bottom: 3%;
-    
+
 }
+
 .pointer {
     cursor: pointer;
 }
-.listEquipped{
+
+.listEquipped {
     overflow: scroll;
 }
-.inicioDivT{
-    padding-top: 5%;
-    padding-bottom: 2%;
-    background-color: #2fabb8;
-    /* background-image: url("/assets/images/bannerMyaInicio.jpg");
+
+.inicioDivT {
+    /* padding-top: 5%;
+    padding-bottom: 2%; */
+    /* background-color: #2fabb8; */
+    background-image: url("/assets/images/bannerMyaInicio.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 3%; */
+    margin-bottom: 3%;
+    height: 40rem;
 
 }
-.logoInic{
+
+.logoInic {
     width: 80%;
     margin-left: 10%;
     margin-right: auto;
 }
-.logoContacto{
+
+.logoContacto {
     width: 80%;
     margin-left: 0%;
     margin-right: auto;
 }
-.nosotrosT{
-     margin-top: -3%;
+
+.nosotrosT {
+    margin-top: -3%;
 }
-.bannerConsultingJofer{
+
+.bannerConsultingJofer {
     background-image: url("/assets/images/bannerCosulting.jpg");
 }
 
-.bannerSpace{
+.longStaysProp {
+    background-color: #f9f6f1;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+#contactoSecond {
+    background-color: #f9f6f1 !important;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+}
+
+.bannerSpace {
     height: 16rem;
     background-image: url("/assets/images/bannerSpace.jpg");
     background-position: center;
@@ -51,16 +72,28 @@
     margin-bottom: 3%;
     margin-top: 5%;
 }
+
+.bannerLong {
+    height: 36rem;
+    background-image: url("/assets/images/longStayBanner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 30%;
+
+}
+
 /* .theBest{
     margin-top: 11% !important;
 } */
-#contacto{
-    background-color: #1c69a5 ;
+#contacto {
+    background-color: #1c69a5;
     height: 50rem;
-    
+
 
 }
-.privacidadBanner{
+
+.privacidadBanner {
     height: 36rem;
     background-image: url("/assets/images/bannerTerrazaInicio.jpg");
     background-position: center;
@@ -68,17 +101,21 @@
     background-size: cover;
 
 }
-.tablePrivacidad{
+
+.tablePrivacidad {
     margin-bottom: 15%;
 }
-.divCatchUp{
+
+.divCatchUp {
     padding-top: 3%;
     margin-top: -3%;
 }
-.componentsDiv{
+
+.componentsDiv {
     margin-top: -5%;
 }
-.mapGoogle{
+
+.mapGoogle {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -94,56 +131,86 @@
     .rounded-bl-lg-5 {
         border-bottom-left-radius: 0.5rem;
     }
-    
+
 }
 
-@media(min-width:992px){
-    
+@media (min-width:400px) and (max-width:991px) {
+    .inicioDivT {
+        height: 27rem;
+       
+
+    }
+
 }
-@media(max-width:991px){
-    .serviciosT{
+
+@media(max-width:400px) {
+    .inicioDivT {
+        height: 30rem;
+        background-image: url("/assets/images/banRes.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 3%;
+        height: 40rem;
+
+    }
+}
+
+
+
+@media(max-width:991px) {
+    .serviciosT {
         margin-top: -17%;
     }
-    .componentsDiv{
+
+    .componentsDiv {
         margin-top: -31%;
     }
-    .divCatchUp{
+
+    .divCatchUp {
         display: none;
     }
-    .footer{
+
+    .footer {
         padding-top: 10%;
         padding-left: 3%;
         padding-right: 3%;
     }
-    #contacto{
+
+    #contacto {
         height: 73rem;
     }
-    .responsiveMarginCard{
+
+    .responsiveMarginCard {
         margin-top: 5%;
     }
-    .inicioDivT2{
+
+    .inicioDivT2 {
         height: 34rem !important;
-    
+
     }
-    .inicioDivT{
-        height: 30rem;
+
     
-    }
-    #gym{
+
+    #gym {
         margin-top: -36%;
     }
-    .theBest{
+
+    .theBest {
         margin-top: 83% !important;
     }
-    .contactForm{
+
+    .contactForm {
         margin-top: -20% !important;
     }
-    .logoContacto{
-        margin-top:-107% ;
+
+    .logoContacto {
+        margin-top: -107%;
     }
-    .titleContact{
+
+    .titleContact {
         margin-top: -15% !important;
         margin-bottom: 15%;
     }
-   
+
 }
