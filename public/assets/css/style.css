@@ -29,6 +29,12 @@
     height: 40rem;
 
 }
+.inicioDivTa{
+    background-color: #2fabb8;
+     padding-top: 5%;
+    padding-bottom: 2%;
+
+}
 
 .logoInic {
     width: 80%;
@@ -200,7 +206,7 @@
     }
 
     .inicioDivT2 {
-        height: 34rem !important;
+        height: 41rem !important;
 
     }
 
