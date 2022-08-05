@@ -65,7 +65,7 @@ app.post("/ajax/email", function (request, response) {
 
 
     var htmlBody = `<h2>Correo de contacto</h2><p>Name: ${request.body.name} </p> <p>Phone: ${request.body.number} </p> <p> e-mail: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Arrive date: ${request.body.arriveDate} </p><p>Departure: ${request.body.departDate} </p> <p>Number of extra people: ${request.body.people} </p>`;
-    var secondHtmlBody =`<h2>Here are the details of your booking!</h2><p>Reservation by the name: ${request.body.name} </p> <p>Your phone number: ${request.body.number} </p> <p> Your e-mail: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Desired arrival date: ${request.body.arriveDate} </p><p>Desired Departure date: ${request.body.departDate} </p> <p>People coming with you: ${request.body.people} </p> <h5>Our team will contact you shortly to set the last details of your stay. </h5>`
+    var secondHtmlBody = `<h2>Here are the details of your booking!</h2><p>Reservation by the name: ${request.body.name} </p> <p>Your phone number: ${request.body.number} </p> <p> Your e-mail: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Desired arrival date: ${request.body.arriveDate} </p><p>Desired Departure date: ${request.body.departDate} </p> <p>People coming with you: ${request.body.people} </p> <h5>Our team will contact you shortly to set the last details of your stay. </h5>`
     let customerMail = `${request.body.email}`
     var mail = {
         from: 'Team: Xyncs Web Studio',
@@ -112,13 +112,28 @@ app.post("/ajax/emailSecond", function (request, response) {
 
 
     var htmlBody = `<h2>Correo de contacto</h2><p>Name: ${request.body.name} </p> <p>Phone: ${request.body.number} </p> <p> e-mail: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Arrive date: ${request.body.arriveDate} </p><p>Departure: ${request.body.departDate} </p> <p>Number of extra people: ${request.body.people} </p>`;
+    var secondHtmlBody = `<h2>Here are the details of your booking!</h2><p>Reservation by the name: ${request.body.name} </p> <p>Your phone number: ${request.body.number} </p> <p> Your e-mail: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Desired arrival date: ${request.body.arriveDate} </p><p>Desired Departure date: ${request.body.departDate} </p> <p>People coming with you: ${request.body.people} </p> <h5>Our team will contact you shortly to set the last details of your stay. </h5>`
+    let customerMail = `${request.body.email}`
     var mail = {
-        from: '"Team: Xyncs Web Studio',
+        from: 'Team: Xyncs Web Studio',
         to: 'hebrit_626@hotmail.com',
-        subject: '¡Alguien ha dejado sus datos en Mya 307 (LONG STAY)!',
+        subject: '¡Alguien ha dejado sus datos en LONG STAY Mya 307!',
         html: htmlBody
     };
+    var secondMail = {
+        from: 'Team: Xyncs Web Studio',
+        to: customerMail,
+        subject: '¡Thanks for booking your long stay in Mya 307!',
+        html: secondHtmlBody
+    };
     transporter.sendMail(mail, function (err, info) {
+        if (err) {
+            return console.log(err);
+        } else {
+            console.log("message sent!");
+        };
+    })
+    transporter.sendMail(secondMail, function (err, info) {
         if (err) {
             return console.log(err);
         } else {
