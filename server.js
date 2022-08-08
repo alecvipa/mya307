@@ -40,10 +40,22 @@ app.get('/inicio', function (req, res) {
     res.render('inicio');
 
 });
-app.get('/:params?', function (req, res) {
-    var params = req.params.params;
-    res.render(params);
-})
+app.get('/longstays', function (req, res) {
+    // res.redirect(targetBaseUrl);
+    res.render('longstays');
+
+});
+app.get('/privacidad', function (req, res) {
+    // res.redirect(targetBaseUrl);
+    res.render('privacidad');
+
+});
+app.get('/thanku', function (req, res) {
+    // res.redirect(targetBaseUrl);
+    res.render('thanku');
+
+});
+
 
 
 // Nodemailer route
