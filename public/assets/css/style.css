@@ -32,6 +32,16 @@
     height: 40rem;
 
 }
+.inicioDivTSecond {
+
+    background-image: url("/assets/images/hermosoEstudioBanner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 3%;
+    height: 40rem;
+
+}
 .inicioDivTa{
     background-color: #2fabb8;
      padding-top: 5%;
@@ -91,6 +101,15 @@
     background-position: 0% 30%;
 
 }
+.bannerLongEs{
+    height: 36rem;
+    background-image: url("/assets/images/longStayEs.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 30%;
+
+}
 
 /* .theBest{
     margin-top: 11% !important;
@@ -144,15 +163,24 @@
 }
 
 @media (min-width:451px) and (max-width:991px) {
-    .inicioDivT {
+    .inicioDivT, .inicioDivTSecond {
         height: 27rem;
     }
 
 }
 
 @media(max-width:450px) {
-    .inicioDivT {
+    .inicioDivT, .inicioDivTSecond {
         background-image: url("/assets/images/banRes.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 3%;
+        height: 46rem;
+
+    }
+    .inicioDivTSecond {
+        background-image: url("/assets/images/banEs.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -164,6 +192,11 @@
         height: 36rem;
         background-image: url("/assets/images/longStory.jpg");
     
+    }
+    .bannerLongEs{
+        height: 36rem;
+        background-image: url("/assets/images/longStoryEs.jpg");
+
     }
     .theGreat{
         margin-top: 20%;
