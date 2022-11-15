@@ -116,8 +116,7 @@
 } */
 #contacto {
     background-color: #1c69a5;
-    height: 50rem;
-
+    margin-bottom: -10%;
 
 }
 
@@ -234,7 +233,7 @@
     }
 
     #contacto {
-        height: 73rem;
+       margin-bottom: -45%;
     }
 
     .responsiveMarginCard {

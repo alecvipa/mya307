@@ -7,6 +7,8 @@ const nodemailer = require("nodemailer");
 const email = process.env.email;
 const superSecretPwd = process.env.superSecretPwd;
 const tokenFb = process.env.tokenAccesoFB
+const stripeLiveKey = process.env.secretKeyStripe
+const stripe = require('stripe')(stripeLiveKey);
 
 // Create an instance of the express app.
 var app = express();
@@ -75,6 +77,51 @@ app.get('/estancias', function (req, res) {
     res.render('estancias');
 
 });
+app.get('/fechas', function (req, res) {
+    // res.redirect(targetBaseUrl);
+    res.render('fechas');
+
+});
+app.get('/dates', function (req, res) {
+    // res.redirect(targetBaseUrl);
+    res.render('dates');
+
+});
+
+//STRIPE
+app.post('/create-checkout-session', async (req, res) => {
+    const session = await stripe.checkout.sessions.create({
+        line_items: [
+            {
+                // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+                price: 'price_1M4Bu4GyOvmlXVnJagoeqCWe',
+                quantity: 1,
+            },
+        ],
+        mode: 'payment',
+        success_url: `${"https://www.mya307.com"}/fechas`,
+        cancel_url: `${"https://www.mya307.com"}/inicio`,
+    });
+
+    res.redirect(303, session.url);
+});
+app.post('/create-checkout-session-en', async (req, res) => {
+    const session = await stripe.checkout.sessions.create({
+        line_items: [
+            {
+                // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+                price: 'price_1M4SeyGyOvmlXVnJEuhHU1TX',
+                quantity: 1,
+            },
+        ],
+        mode: 'payment',
+        success_url: `${"https://www.mya307.com"}/dates`,
+        cancel_url: `${"https://www.mya307.com"}/home`,
+    });
+
+    res.redirect(303, session.url);
+});
+
 
 
 

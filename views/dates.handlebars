@@ -1,0 +1,147 @@
+<div class="datesDiv">
+    <div class="fixed-action-btn" id="fixed1">
+        <a class="btn btn-floating btn-primary btn-lg text-white" style="background-color: #25D366;"
+            href="https://api.whatsapp.com/send?phone=525581809928&text=Hola, Me gustaría recibir información sobre Mya 307"
+            target="_blank">
+            <i class="fab fa-whatsapp fa-2xl"></i>
+        </a>
+
+        <ul class="list-unstyled">
+            {{!-- <li>
+                <a class="btn btn-primary btn-floating btn-lg" style="background-color: #f44336;">
+                    <i class="fas fa-star"></i>
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-primary btn-floating btn-lg" style="background-color: #fdd835;">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-primary btn-floating btn-lg" style="background-color: #4caf50;">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-primary btn-floating btn-lg" style="background-color: #2196f3;">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </li> --}}
+        </ul>
+    </div>
+    <div id="contacto">
+
+        <div data-draggable="true" style="position: relative;">
+            <!---->
+            <!---->
+            <section draggable="false" class="overflow-hidden pt-0" data-v-271253ee="">
+                <section class="mb-10 background-radial-gradient overflow-hidden">
+                    <div class="container px-4 py-5 px-md-5 text-center text-lg-start">
+
+                        <div class="row gx-lg-5 align-items-center mb-5">
+                            <div class="col-lg-6 mb-5 mb-lg-0 theBest" style="z-index: 10">
+                                <img src="/assets/images/myaLogoContacto.jpg" alt="logoContacto" class="logoContacto">
+
+                                <h1 class=" display-3 fw-bold ls-tight titleContact" style="color: hsl(218, 81%, 95%)">
+                                    <span>Beautiful studio</span> <br> <span style="color: hsl(218, 82%, 83%)">in
+                                        Aldea Zamá, Tulum</span>
+                                </h1>
+
+                            </div>
+                            <div class="col-lg-6 mb-5 mb-lg-0 position-relative contactForm">
+                                <h2 class="text-white text-center">Just one last step! Please share with us the details
+                                    of your reservation</h2>
+                                <hr class="text-white">
+                                <h5 class="text-white text-center">Our team will contact you shortly to coordinate your
+                                    stay</h5>
+
+                                <br>
+                                <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                                <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+                                <div class="card bg-glass">
+                                    <div class="card-body px-4 py-5 px-md-5">
+                                        <form action="/ajax/email" method="POST"
+                                            onsubmit="return submitEmailForm(this);">
+                                            <!-- 2 column grid layout with text inputs for the first and last names -->
+                                            <div class="row">
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-outline"> <input type="text" id="form3Example1"
+                                                            class="form-control formInput" name="name" required>
+                                                        <label class="form-label" for="form3Example1"
+                                                            style="margin-left: 0px;">Name</label>
+                                                        <div class="form-notch">
+                                                            <div class="form-notch-leading" style="width: 9px;">
+                                                            </div>
+                                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                                            <div class="form-notch-trailing"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div> <!-- Email input -->
+                                            <div class="form-outline mb-4"> <input type="email" id="form3Example3"
+                                                    class="form-control formInput" name="email" required>
+                                                <label class="form-label" for="form3Example3"
+                                                    style="margin-left: 0px;">Email address</label>
+                                                <div class="form-notch">
+                                                    <div class="form-notch-leading" style="width: 9px;"></div>
+                                                    <div class="form-notch-middle" style="width: 88.8px;"></div>
+                                                    <div class="form-notch-trailing"></div>
+                                                </div>
+                                            </div> <!-- Number input -->
+                                            <div class="form-outline mb-4">
+                                                <input type="number" id="form6Example6" class="form-control formInput"
+                                                    name="number" required />
+                                                <label class="form-label" for="form6Example6">Phone</label>
+                                            </div>
+                                            <!-- Number input -->
+                                            <div class="form-outline mb-4">
+                                                <input type="number" id="form6Example6" class="form-control formInput"
+                                                    name="people" required />
+                                                <label class="form-label" for="form6Example6">¿Number of people
+                                                    coming with you?</label>
+                                            </div>
+                                            {{!-- Calendar --}}
+                                            <section>
+                                                <div class="form-group">
+                                                    <!-- Date input -->
+                                                    <label class="control-label" for="date">Preferred arrive
+                                                        date</label>
+                                                    <input class="form-control formInput" id="date"
+                                                        placeholder="MM/DD/YYY" type="text" name="arriveDate"
+                                                        required />
+                                                </div>
+                                            </section>
+                                            <section>
+                                                <div class="form-group">
+                                                    <!-- Date input -->
+                                                    <label class="control-label" for="date">Preferred depart
+                                                        date</label>
+                                                    <input class="form-control formInput" id="date"
+                                                        placeholder="MM/DD/YYY" type="text" name="departDate"
+                                                        required />
+                                                </div>
+                                            </section>
+                                            <!-- Checkbox -->
+                                            <div class="form-check d-flex justify-content-center mb-4"> <input
+                                                    class="form-check-input me-2" type="checkbox" value=""
+                                                    id="form2Example33" checked="" required> <label
+                                                    class="form-check-label" for="form2Example33">Accept
+                                                    <span><a href="/privacy">privacy policy</a></span></label>
+                                            </div> <!-- Submit button -->
+                                            <button type="submit" class="btn  btn-primary btn-block mb-4"
+                                                aria-controls="#picker-editor">Send</button>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!---->
+        </div>
+    </div>
+</div>
